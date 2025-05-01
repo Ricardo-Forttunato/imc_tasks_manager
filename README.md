@@ -1,10 +1,22 @@
-# imc_tasks_manager
+# PROJETO INTEGRADOR - ANALISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES
 
-A new Flutter project.
+## Alunos
+
+- joão Ricardo Forttunato da Silva
+
+##
+
+## Resumo
+
+O **IMC Tasks Manager** é um aplicativo inovador desenvolvido em Flutter, projetado para facilitar o gerenciamento de tarefas relacionadas ao Índice de Massa Corporal (IMC). Com uma interface intuitiva e funcionalidades práticas, o aplicativo ajuda os usuários a organizar e acompanhar suas atividades, promovendo uma rotina mais saudável e eficiente.
+
+##
 
 ## Descrição do Projeto
 
 O **IMC Tasks Manager** é um aplicativo desenvolvido em Flutter para auxiliar no gerenciamento de tarefas relacionadas ao Índice de Massa Corporal (IMC). Ele permite que os usuários organizem, acompanhem e concluam tarefas de forma eficiente, promovendo uma melhor gestão de atividades relacionadas à saúde e bem-estar.
+
+##
 
 ## Funcionalidades
 
@@ -13,10 +25,27 @@ O **IMC Tasks Manager** é um aplicativo desenvolvido em Flutter para auxiliar n
 - Marcação de tarefas como concluídas.
 - Interface amigável e intuitiva.
 
+##
+
 ## Tecnologias Utilizadas
 
 - **Flutter**: Framework para desenvolvimento multiplataforma.
 - **Dart**: Linguagem de programação utilizada no Flutter.
+- **SharedPreferences**: armazenamento de pequenas quantidades de dados de forma persistente.
+
+##
+
+## Modelo de Modelagem de Dados com Armazenamento Local
+
+Para a modelagem de dados, foi utilizado o package **shared_preferences** no arquivo `Todo_repository.dart`. Este package permite o armazenamento local de dados simples, como pares chave-valor, facilitando a persistência de informações relacionadas às tarefas do usuário.
+Características principais:
+
+- Armazena dados primitivos como int, double, bool, String e List<String>.
+- Persistência automática, ou seja, os dados permanecem salvos mesmo após o fechamento do aplicativo.
+- Uso simples, sem necessidade de banco de dados complexo.
+- Compatível com Android e iOS, utilizando NSUserDefaults no iOS/macOS e SharedPreferences no Android.
+
+##
 
 ## Como Executar o Projeto
 
@@ -39,9 +68,13 @@ O **IMC Tasks Manager** é um aplicativo desenvolvido em Flutter para auxiliar n
    ```
    Obs: antes de executar o flutter run execute o flutter doctor para garantir que todas depencias foram criadas.
 
+##
+
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+##
 
 ## Licença
 
