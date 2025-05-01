@@ -125,10 +125,10 @@ class _HomeState extends State<Home> {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 0,
             child: Center(
               child: Container(
-                padding: const EdgeInsets.all(32.0),
+                padding: const EdgeInsets.all(18.0),
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Theme.of(context).primaryColor,
