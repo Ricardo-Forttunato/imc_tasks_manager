@@ -2,7 +2,7 @@
 
 ## Alunos
 
-- joão Ricardo Forttunato da Silva
+- João Ricardo Fortunato da Silva
 
 ##
 
@@ -31,7 +31,7 @@ O **IMC Tasks Manager** é um aplicativo desenvolvido em Flutter para auxiliar n
 
 - **Flutter**: Framework para desenvolvimento multiplataforma.
 - **Dart**: Linguagem de programação utilizada no Flutter.
-- **SharedPreferences**: armazenamento de pequenas quantidades de dados de forma persistente.
+- **SharedPreferences**: Para armazenamento de pequenas quantidades de dados de forma persistente.
 
 ##
 
@@ -52,7 +52,7 @@ Características principais:
 1. Certifique-se de ter o Flutter instalado em sua máquina.
 2. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/imc_tasks_manager.git
+   git clone https://github.com/Ricardo-Forttunato/imc_tasks_manager
    ```
 3. Acesse o diretório do projeto:
    ```bash
