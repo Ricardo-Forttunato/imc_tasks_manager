@@ -20,10 +20,15 @@ O **IMC Tasks Manager** é um aplicativo desenvolvido em Flutter para auxiliar n
 
 ## Funcionalidades
 
+- Interface amigável e intuitiva.
+- Tema escuro ativado com base na configuração do sistema e alternavel.
+- Calculo do indice de massa corporal do usuário.
+- botão de limpeza dos campos preenchidos em caso de erro de digitação.
+- Sugestão de tarefas baseadas no IMC do usuário.
 - Cadastro de tarefas personalizadas.
 - Organização de tarefas por categorias.
-- Marcação de tarefas como concluídas.
-- Interface amigável e intuitiva.
+- Exclusão de tarefas após concluídas.
+- Botão para limpar todas as tarefas com dupla confirmação.
 
 ##
 
