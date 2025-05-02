@@ -30,9 +30,9 @@
     "Liberation Mono", "Courier New", "monospace";
 }
 
-/* Additional styles for the landing page */
+/* Estilos adicionais fora do tailwind */
 nav {
-  background-color: #1f2937; /* Tailwind's gray-800 */
+  background-color: #1f2937;
 }
 
 section {
@@ -40,8 +40,8 @@ section {
 }
 
 section#form-section {
-  background-color: #f9fafb; /* Tailwind's gray-50 */
-  padding-bottom: 5rem; /* Add extra padding to prevent footer overlap */
+  background-color: #f9fafb;
+  padding-bottom: 5rem;
 }
 
 form input {
@@ -53,15 +53,15 @@ form button {
 }
 
 form button:hover {
-  background-color: #2563eb; /* Tailwind's blue-600 */
+  background-color: #2563eb;
 }
 
 footer {
-  position: relative; /* Alterado de fixed para relative */
+  position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #1f2937; /* Tailwind's gray-800 */
-  color: #f9fafb; /* Tailwind's gray-50 */
+  background-color: #1f2937;
+  color: #f9fafb;
   text-align: center;
   padding: 1rem 0;
 }
