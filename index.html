@@ -10,7 +10,6 @@
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 	<link rel="icon" href="web/favicon.png" type="image/png" />
 	<script>
-		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
 		if (
 			localStorage.getItem("color-theme") === "dark" ||
 			(!("color-theme" in localStorage) &&
@@ -57,23 +56,23 @@
 								email: "E-mail",
 								submit: "Enviar",
 								"All rights reserved.": "Todos os direitos reservados.",
-								
+
 								"A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.": "Um kit de ferramentas de interface do usuário para criar aplicativos compilados nativamente para dispositivos móveis, web e desktop a partir de uma única base de código.",
 								"The programming language used with Flutter to build fast and scalable applications.": "A linguagem de programação usada com o Flutter para criar aplicativos rápidos e escaláveis.",
 								"A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.": "Uma biblioteca usada para persistência local de dados, permitindo o armazenamento de pares chave-valor para tarefas e preferências do usuário.",
 								"Tools and libraries for building Android applications.": "Ferramentas e bibliotecas para criar aplicativos Android.",
 								"Tools and libraries for building iOSapplications.": "Ferramentas e bibliotecas para criar aplicativos iOS.",
-
+								"Pt-Br": "Pt-Br",
+								En: "En",
 							},
 						},
 					},
 				},
 				(err, t) => {
 					if (err) return console.error(err);
-
 					// Atualiza os textos com base no atributo data-i18n
-					document.querySelectorAll("[data-i18n]").forEach((el) => {
-						el.textContent = t(el.getAttribute("data-i18n"));
+					document.querySelectorAll("[data-i18n]").forEach((e) => {
+						e.textContent = t(e.getAttribute("data-i18n"));
 					});
 				}
 			);
@@ -120,7 +119,8 @@
 			<div class="container mx-auto text-center">
 				<h1 class="text-4xl font-bold mb-4" data-i18n="Welcome to IMC Tasks Manager"></h1>
 				<p class="text-lg mb-6" data-i18n="Manage your tasks and track your BMI efficiently"></p>
-				<a href="#get-started" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold" data-i18n="get started"></a>
+				<a href="#get-started" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold"
+					data-i18n="get started"></a>
 			</div>
 		</section>
 
@@ -134,7 +134,8 @@
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Body Mass Index Calculation"></h3>
 							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The BMI calculation feature allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range."></p>
+								data-i18n="The BMI calculation feature allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
+							</p>
 						</div>
 					</div>
 
@@ -143,7 +144,8 @@
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Task Suggestion"></h3>
 							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The feature of generating suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being"></p>
+								data-i18n="The feature of generating suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
+							</p>
 						</div>
 					</div>
 
@@ -152,7 +154,8 @@
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Create and Manage Tasks"></h3>
 							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The feature of creating and managing tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI)."></p>
+								data-i18n="The feature of creating and managing tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
+							</p>
 						</div>
 					</div>
 
@@ -165,7 +168,9 @@
 				<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
 					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
 						<h3><strong>Flutter</strong></h3>
-						<p data-i18n="A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase."></p>
+						<p
+							data-i18n="A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.">
+						</p>
 					</div>
 					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
 						<h3><strong>Dart</strong></h3>
@@ -173,7 +178,9 @@
 					</div>
 					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
 						<h3><strong>SharedPreferences</strong></h3>
-						<p data-i18n="A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences."></p>
+						<p
+							data-i18n="A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.">
+						</p>
 					</div>
 					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
 						<h3><strong>Android SDK</strong></h3>
@@ -210,18 +217,16 @@
 						<label for="email" class="block text-gray-700" data-i18n="email"></label>
 						<input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required />
 					</div>
-					<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded" data-i18n="submit"></button>
+					<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded" data-i18n="submit"
+						title="submit"></button>
 				</form>
 			</div>
 		</section>
 		<section class="py-10">
 			<div class="container mx-auto text-center">
-				<div class="language-selector">
-					<button id="btn-pt" class="bg-blue-500 text-white px-4 py-2 rounded">
-						Português
-					</button>
-					<button id="btn-en" class="bg-gray-500 text-white px-4 py-2 rounded">
-						English
+				<div class="language-toggle">
+					<button id="language-toggle" class="bg-blue-500 text-white px-3 py-2 rounded-full">
+						<span id="language-label">En</span>
 					</button>
 				</div>
 			</div>
@@ -238,17 +243,23 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const updateContent = () => {
-				document.querySelectorAll("[data-i18n]").forEach((el) => {
-					el.textContent = i18next.t(el.getAttribute("data-i18n"));
+				document.querySelectorAll("[data-i18n]").forEach((e) => {
+					e.textContent = i18next.t(e.getAttribute("data-i18n"));
 				});
 			};
 
-			document.getElementById("btn-pt").addEventListener("click", () => {
-				i18next.changeLanguage("pt_BR", updateContent);
-			});
+			const languageToggle = document.getElementById("language-toggle");
+			const languageLabel = document.getElementById("language-label");
 
-			document.getElementById("btn-en").addEventListener("click", () => {
-				i18next.changeLanguage("en", updateContent);
+			languageToggle.addEventListener("click", () => {
+				const currentLanguage = i18next.language;
+				const newLanguage = currentLanguage === "pt_BR" ? "en" : "pt_BR";
+				i18next.changeLanguage(newLanguage, () => {
+					languageLabel.textContent = newLanguage === "pt_BR" ? "En" : "pt_BR";
+					document.querySelectorAll("[data-i18n]").forEach((el) => {
+						el.textContent = i18next.t(el.getAttribute("data-i18n"));
+					});
+				});
 			});
 		});
 	</script>

@@ -95,7 +95,7 @@ footer {
   display: block;
 }
 
-.language-selector {
+.language-toggle {
   position: fixed;
   bottom: 60px;
   right: 20px;
