@@ -66,6 +66,9 @@ https://ricardo-forttunato.github.io/imc_tasks_manager/
 ## Como Executar o Projeto
 
 1. Certifique-se de ter o Flutter instalado em sua máquina.
+
+   #### https://docs.flutter.dev/get-started/instal
+
 2. Clone este repositório:
    ```bash
    git clone https://github.com/Ricardo-Forttunato/imc_tasks_manager
