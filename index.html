@@ -287,7 +287,7 @@
 			<div class="container mx-auto text-center">
 				<div class="language-toggle">
 					<button id="language-toggle" class="bg-blue-500 text-white px-3 py-2 rounded-full">
-						<span id="language-label">En</span>
+						<span id="language-label">pt_BR</span>
 					</button>
 				</div>
 			</div>
@@ -313,7 +313,7 @@
 				const currentLanguage = i18next.language;
 				const newLanguage = currentLanguage === "pt_BR" ? "en" : "pt_BR";
 				i18next.changeLanguage(newLanguage, () => {
-					languageLabel.textContent = newLanguage === "pt_BR" ? "En" : "pt_BR";
+					languageLabel.textContent = newLanguage === "pt_BR" ? "pt_BR" : "En";
 					document.querySelectorAll("[data-i18n]").forEach((el) => {
 						el.textContent = i18next.t(el.getAttribute("data-i18n"));
 					});
