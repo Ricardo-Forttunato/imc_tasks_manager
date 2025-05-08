@@ -10,17 +10,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 	<link rel="icon" href="web/favicon.png" type="image/png" />
 	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-	<script>
-		if (
-			localStorage.getItem("color-theme") === "dark" ||
-			(!("color-theme" in localStorage) &&
-				window.matchMedia("(prefers-color-scheme: dark)").matches)
-		) {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	</script>
+	<!-- Script do i18Next -->
 	<script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
@@ -39,14 +29,14 @@
 								"Manage your tasks and track your BMI efficiently":
 									"Gerencie suas tarefas e acompanhe seu IMC de forma eficiente.",
 								"Body Mass Index Calculation": "Calculo do indice de Massa Corporal",
-								"The BMI calculation feature allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.":
-									"A funcionalidade de calcular o IMC permite que os usuários insiram seu peso e altura para obter o Índice de Massa Corporal (IMC), ajudando a avaliar se estão dentro de uma faixa de peso saudável.",
+								"Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.":
+									"Permite que os usuários insiram seu peso e altura para obter o Índice de Massa Corporal (IMC), ajudando a avaliar se estão dentro de uma faixa de peso saudável.",
 								"Task Suggestion": "Sugestão de Tarefas",
-								"The feature of generating suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being":
-									"A funcionalidade de gerar sugestões baseadas no valor do IMC do usuário oferece recomendações personalizadas, como dicas de saúde, exercícios ou ajustes na dieta, ajudando a melhorar o bem-estar geral.",
+								"Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being":
+									"Gera sugestões baseadas no valor do IMC do usuário oferece recomendações personalizadas, como dicas de saúde, exercícios ou ajustes na dieta, ajudando a melhorar o bem-estar geral.",
+								"Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).":
+									"Criar e gerenciar tarefas permite que os usuários organizem suas atividades de forma eficiente, com foco em manter ou melhorar o Índice de Massa Corporal (IMC). ",
 								"Create and Manage Tasks": "Criar e Gerenciar Tarefas",
-								"The feature of creating and managing tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).":
-									"A funcionalidade de criar e gerenciar tarefas permite que os usuários organizem suas atividades de forma eficiente, com foco em manter ou melhorar o Índice de Massa Corporal (IMC). ",
 								"Used Technologies": "Tecnologias Utilizadas",
 								"Get started with BMI Tasks Manager":
 									"Comece com o IMC Tasks Manager",
@@ -84,7 +74,7 @@
 </head>
 
 <body>
-	<nav class="bg-gray-800 dark:bg-gray-900 p-4">
+	<nav class="bg-gray-800 p-4">
 		<div class="container mx-auto flex justify-between items-center">
 			<div class="flex items-center">
 				<a href="#" class="text-white text-lg font-bold" data-i18n="BMI Tasks Manager"></a>
@@ -97,21 +87,15 @@
 							d="M4 6h16M4 12h16m-7 6h7"></path>
 					</svg>
 				</button>
-				<ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-4 content-center md:justify-end">
+				<ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-4 md:justify-end">
 					<li>
-						<a href="#features"
-							class="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-200"
-							data-i18n="Feature"></a>
+						<a href="#features" class="text-gray-300 hover:text-white" data-i18n=" Feature"></a>
 					</li>
 					<li>
-						<a href="#technologies"
-							class="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-200"
-							data-i18n="Technologies"></a>
+						<a href="#technologies" class="text-gray-300 hover:text-white" data-i18n=" Technologies"></a>
 					</li>
 					<li>
-						<a href="#get-started"
-							class="text-gray-300 hover:text-white dark:text-gray-400 dark:hover:text-gray-200"
-							data-i18n="Get Started"></a>
+						<a href="#get-started" class="text-gray-300 hover:text-white" data-i18n=" Get Started"></a>
 					</li>
 				</ul>
 			</div>
@@ -123,7 +107,7 @@
 				<h1 class="text-4xl font-bold mb-4" data-i18n="Welcome to BMI Tasks Manager"></h1>
 				<p class="text-lg mb-6" data-i18n="Manage your tasks and track your BMI efficiently"></p>
 				<a href="#get-started"
-					class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white"
+					class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white"
 					data-i18n="Get Started" title="get-started">
 				</a>
 			</div>
@@ -133,35 +117,35 @@
 				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Features"></h2>
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden">
 						<img src="./images/calculoimc.png" alt="Feature 1" class="w-full h-60 object-contain"
 							alt="caculadora de imc da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Body Mass Index Calculation"></h3>
-							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The BMI calculation feature allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
+							<p class="text-gray-600"
+								data-i18n="Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
 							</p>
 						</div>
 					</div>
 
-					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden">
 						<img src="./images/sugestoes.png" alt="Feature 2" class="w-full h-60 object-contain"
 							alt="Campo de sugestões da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Task Suggestion"></h3>
-							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The feature of generating suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
+							<p class="text-gray-600"
+								data-i18n="Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
 							</p>
 						</div>
 					</div>
 
-					<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden">
 						<img src="./images/tarefas.png" alt="Feature 3" class="w-full h-60 object-contain"
 							alt="Campo de criação e gerenciamento de tarefas da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" data-i18n="Create and Manage Tasks"></h3>
-							<p class="text-gray-600 dark:text-gray-300"
-								data-i18n="The feature of creating and managing tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
+							<p class="text-gray-600"
+								data-i18n="Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
 							</p>
 						</div>
 					</div>
@@ -172,10 +156,8 @@
 		<section id="technologies" class="py-10">
 			<div class="container mx-auto text-center">
 				<h2 class="text-2xl font-bold mb-6" data-i18n="Used Technologies"></h2>
-				<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-					<div
-						class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col items-center">
-
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">
 							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
 								class="w-12" alt="logo framework flutter" />
@@ -185,20 +167,17 @@
 							data-i18n="A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.">
 						</p>
 					</div>
-					<div
-						class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col items-center">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://dart.dev/" target="_blank" rel="noopener noreferrer">
 							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
 								class="w-12" alt="logo linguagem dart" />
 						</a>
-
 						<h3><strong>Dart</strong></h3>
 						<p
 							data-i18n="The programming language used with Flutter to build fast and scalable applications.">
 						</p>
 					</div>
-					<div
-						class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col items-center">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://pub.dev/packages/shared_preferences" target="_blank" rel="noopener noreferrer">
 							<img src="./images/storage_icon.png" class="w-12" alt="icone de armazenamento" />
 						</a>
@@ -207,8 +186,7 @@
 							data-i18n="A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.">
 						</p>
 					</div>
-					<div
-						class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col items-center">
+					<!-- <div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://developer.android.com/?hl=pt-br" target="_blank" rel="noopener noreferrer">
 							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
 								class="w-12" alt="icone logo do android" />
@@ -216,8 +194,7 @@
 						<h3><strong>Android SDK</strong></h3>
 						<p data-i18n="Tools and libraries for building Android applications."></p>
 					</div>
-					<div
-						class="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden flex flex-col items-center">
+					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://developer.apple.com/ios/" target="_blank" rel="noopener noreferrer">
 							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
 								class="w-12" alt="icone logo do IOS Apple" />
@@ -226,7 +203,7 @@
 						<h3><strong>iOS SDK</strong></h3>
 
 						<p data-i18n="Tools and libraries for building iOSapplications."></p>
-					</div>
+					</div> -->
 				</div>
 		</section>
 		<section id="get-started" class="py-10">
@@ -238,10 +215,9 @@
 							data-i18n="Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.">
 						</p>
 						<Card class="max-w-sm bg-white shadow-md rounded-lg p-6">
-							<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white"
+							<h5 class="mb-2 text-3xl font-bold text-gray-900"
 								data-i18n="Get control of your BMI anywhere"></h5>
-							<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400"
-								data-i18n="Download the app today."></p>
+							<p class="mb-5 text-base text-gray-500 sm:text-lg" data-i18n="Download the app today."></p>
 							<div class="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
 								<a href="#"
 									class="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
@@ -262,7 +238,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="form-section" class="py-10">
+		<section id="form-section" class="py-10 bg-gray-50">
 			<div class="container mx-auto px-2 md:px-3.5">
 				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Stay Updated"></h2>
 				<form action="mailto:teste@aplicacao.com.br" method="post" enctype="text/plain"
@@ -278,30 +254,27 @@
 							required />
 					</div>
 					<div class="flex justify-center w-full">
-						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-gray-800"
 							data-i18n="Submit" title="submit">
 						</button>
 					</div>
 				</form>
 			</div>
 		</section>
-		<section class="py-10">
+		<section class="py-10 bg-gray-50">
 			<div class="container mx-auto text-center">
 				<div class="fixed right-2 bottom-16 z-50 ">
 					<button id="language-toggle"
-						class="bg-blue-500 text-white px-3 py-2 rounded-full hover:bg-blue-700">
+						class="bg-blue-500 text-white px-3 py-2 rounded-full hover:bg-gray-800">
 						<span id="language-label">pt_BR</span>
 					</button>
 				</div>
 			</div>
 		</section>
 	</main>
-	<footer
-		class="flex items-center justify-center gap-2 bg-gray-800 dark:bg-gray-900 text-white py-4 relative bottom-0 w-full">
+	<footer class="flex items-center justify-center gap-2 bg-gray-800 text-white py-4 relative bottom-0 w-full">
 		<p><span data-i18n="BMI Tasks Manager"></span> &copy; 2025 - <span data-i18n="All rights reserved."></span></p>
 	</footer>
-	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-	<script src="app-bundle.js" type="module"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const updateContent = () => {
