@@ -48,7 +48,11 @@
 	</nav>
 	<main>
 		<section id="banner" class="bg-blue-500 text-white">
-			<div class="container py-2 sm:py-10 mx-auto text-center">
+			<div class="sm:hidden">
+				<img src="./images/banner-top-left.png" alt="people with a smartphone"
+					class="mx-auto md:w-1/2 h-auto w-full " />
+			</div>
+			<div class="bg-blue-500 container py-2 sm:py-10 mx-auto text-center">
 				<h1 class="text-4xl font-bold mb-4" t="Welcome to BMI Tasks Manager"></h1>
 				<p class="text-lg mb-6" t="Manage your tasks and track your BMI efficiently"></p>
 				<a href="#get-started"
@@ -57,7 +61,7 @@
 				</a>
 			</div>
 			<div class="sm:hidden">
-				<img src="./images/banner-img.png" alt="people with a smartphone"
+				<img src="./images/banner-botton-right.png" alt="people with a smartphone"
 					class="mx-auto mt-6 md:w-1/2 h-auto w-full " />
 			</div>
 		</section>
@@ -191,14 +195,14 @@
 
 					</div>
 					<div class="flex justify-center w-full">
-						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-gray-800"
+						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-gray-800"
 							t="Submit" title="submit">
 						</button>
 					</div>
 				</form>
 			</div>
 		</section>
-		<section class="py-10 bg-gray-50">
+		<section class="py-0 bg-gray-50">
 			<div class="container mx-auto text-center">
 				<div class="fixed right-2 bottom-16 z-50 ">
 					<button id="language-toggle"
