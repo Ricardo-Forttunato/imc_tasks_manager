@@ -10,74 +10,16 @@
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 	<link rel="icon" href="web/favicon.png" type="image/png" />
 	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-	<!-- Script do i18Next -->
+	<!-- Script cdn do i18Next -->
 	<script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			i18next.init(
-				{
-					lng: "pt_BR", // Define o idioma inicial
-					resources: {
-						pt_BR: {
-							translation: {
-								"BMI Tasks Manager": "Gerenciador de Tarefas IMC",
-								Features: "Recursos",
-								Technologies: "Tecnologias",
-								"Get Started": "Comece Agora",
-								"Welcome to BMI Tasks Manager":
-									"Bem-vindo ao Gerenciador de Tarefas IMC",
-								"Manage your tasks and track your BMI efficiently":
-									"Gerencie suas tarefas e acompanhe seu IMC de forma eficiente.",
-								"Body Mass Index Calculation": "Calculo do indice de Massa Corporal",
-								"Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.":
-									"Permite que os usuários insiram seu peso e altura para obter o Índice de Massa Corporal (IMC), ajudando a avaliar se estão dentro de uma faixa de peso saudável.",
-								"Task Suggestion": "Sugestão de Tarefas",
-								"Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being":
-									"Gera sugestões baseadas no valor do IMC do usuário oferece recomendações personalizadas, como dicas de saúde, exercícios ou ajustes na dieta, ajudando a melhorar o bem-estar geral.",
-								"Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).":
-									"Criar e gerenciar tarefas permite que os usuários organizem suas atividades de forma eficiente, com foco em manter ou melhorar o Índice de Massa Corporal (IMC). ",
-								"Create and Manage Tasks": "Criar e Gerenciar Tarefas",
-								"Used Technologies": "Tecnologias Utilizadas",
-								"Get started with BMI Tasks Manager":
-									"Comece com o IMC Tasks Manager",
-								"Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.":
-									"Descubra os benefícios de gerenciar suas tarefas de forma eficiente enquanto acompanha seu IMC. Simplifique sua vida e mantenha-se organizado com nosso aplicativo fácil de usar.",
-								"Stay Updated": "Mantenha-se atualizado",
-								Name: "Nome",
-								"E-mail": "E-mail",
-								Submit: "Enviar",
-								"All rights reserved.": "Todos os direitos reservados.",
-								"A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.": "Um kit de ferramentas de interface do usuário para criar aplicativos compilados nativamente para dispositivos móveis, web e desktop a partir de uma única base de código.",
-								"The programming language used with Flutter to build fast and scalable applications.": "A linguagem de programação usada com o Flutter para criar aplicativos rápidos e escaláveis.",
-								"A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.": "Uma biblioteca usada para persistência local de dados, permitindo o armazenamento de pares chave-valor para tarefas e preferências do usuário.",
-								"Tools and libraries for building Android applications.": "Ferramentas e bibliotecas para criar aplicativos Android.",
-								"Tools and libraries for building iOSapplications.": "Ferramentas e bibliotecas para criar aplicativos iOS.",
-								"Pt-Br": "Pt-Br",
-								En: "En",
-								"Get control of your BMI anywhere": "Tenha controle do seu IMC em qualquer lugar",
-								"Download the app today.": "Baixe o aplicativo hoje.",
-								"Get in on": "Baixe em",
-							},
-						},
-					},
-				},
-				(err, t) => {
-					if (err) return console.error(err);
-					// Atualiza os textos com base no atributo data-i18n
-					document.querySelectorAll("[data-i18n]").forEach((e) => {
-						e.textContent = t(e.getAttribute("data-i18n"));
-					});
-				}
-			);
-		});
-	</script>
 </head>
 
 <body>
 	<nav class="bg-gray-800 p-4">
 		<div class="container mx-auto flex justify-between items-center">
-			<div class="flex items-center">
-				<a href="#" class="text-white text-lg font-bold" data-i18n="BMI Tasks Manager"></a>
+			<div class="flex flex-col items-center gap-2.5 md:flex-row">
+				<img src="./assets/balance_icon.png" alt="balance icon" class="w-10 h-10 mr-2" />
+				<a href="#" class="text-white text-lg font-bold hidden md:block" t="BMI TASKS MANAGER">Titulo</a>
 			</div>
 			<div class="flex flex-col items-end">
 				<button id="menu-toggle" class="text-white block md:hidden">
@@ -89,41 +31,48 @@
 				</button>
 				<ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-4 md:justify-end">
 					<li>
-						<a href="#features" class="text-gray-300 hover:text-white" data-i18n=" Feature"></a>
+						<a href="#features" class="text-gray-300 hover:text-white" t="Features"></a>
 					</li>
 					<li>
-						<a href="#technologies" class="text-gray-300 hover:text-white" data-i18n=" Technologies"></a>
+						<a href="#technologies" class="text-gray-300 hover:text-white" t="Technologies"></a>
 					</li>
 					<li>
-						<a href="#get-started" class="text-gray-300 hover:text-white" data-i18n=" Get Started"></a>
+						<a href="#get-started" class="text-gray-300 hover:text-white" t="Get Started"></a>
+					</li>
+					<li>
+						<a href="#form-section" class="text-gray-300 hover:text-white" t="Contact"></a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<main>
-		<section id="banner" class="py-10 bg-blue-500 text-white">
-			<div class="container mx-auto text-center">
-				<h1 class="text-4xl font-bold mb-4" data-i18n="Welcome to BMI Tasks Manager"></h1>
-				<p class="text-lg mb-6" data-i18n="Manage your tasks and track your BMI efficiently"></p>
+		<section id="banner" class="bg-blue-500 text-white">
+			<div class="container py-2 sm:py-10 mx-auto text-center">
+				<h1 class="text-4xl font-bold mb-4" t="Welcome to BMI Tasks Manager"></h1>
+				<p class="text-lg mb-6" t="Manage your tasks and track your BMI efficiently"></p>
 				<a href="#get-started"
 					class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white"
-					data-i18n="Get Started" title="get-started">
+					t="Get Started" title="get-started">
 				</a>
+			</div>
+			<div class="sm:hidden">
+				<img src="./images/banner-img.png" alt="people with a smartphone"
+					class="mx-auto mt-6 md:w-1/2 h-auto w-full " />
 			</div>
 		</section>
 		<section id="features" class="py-10">
 			<div class="container mx-auto">
-				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Features"></h2>
+				<h2 class="text-2xl font-bold text-center mb-6" t="Features"></h2>
 				<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
 					<div class="bg-white shadow-md rounded-lg overflow-hidden">
 						<img src="./images/calculoimc.png" alt="Feature 1" class="w-full h-60 object-contain"
 							alt="caculadora de imc da aplicação" />
 						<div class="p-4 flex flex-col items-center">
-							<h3 class="text-lg font-bold mb-2" data-i18n="Body Mass Index Calculation"></h3>
+							<h3 class="text-lg font-bold mb-2" t="Body Mass Index Calculation"></h3>
 							<p class="text-gray-600"
-								data-i18n="Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
+								t="Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
 							</p>
 						</div>
 					</div>
@@ -132,9 +81,9 @@
 						<img src="./images/sugestoes.png" alt="Feature 2" class="w-full h-60 object-contain"
 							alt="Campo de sugestões da aplicação" />
 						<div class="p-4 flex flex-col items-center">
-							<h3 class="text-lg font-bold mb-2" data-i18n="Task Suggestion"></h3>
+							<h3 class="text-lg font-bold mb-2" t="Task Suggestion"></h3>
 							<p class="text-gray-600"
-								data-i18n="Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
+								t="Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
 							</p>
 						</div>
 					</div>
@@ -143,9 +92,9 @@
 						<img src="./images/tarefas.png" alt="Feature 3" class="w-full h-60 object-contain"
 							alt="Campo de criação e gerenciamento de tarefas da aplicação" />
 						<div class="p-4 flex flex-col items-center">
-							<h3 class="text-lg font-bold mb-2" data-i18n="Create and Manage Tasks"></h3>
+							<h3 class="text-lg font-bold mb-2" t="Create and Manage Tasks"></h3>
 							<p class="text-gray-600"
-								data-i18n="Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
+								t="Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
 							</p>
 						</div>
 					</div>
@@ -155,7 +104,7 @@
 		</section>
 		<section id="technologies" class="py-10">
 			<div class="container mx-auto text-center">
-				<h2 class="text-2xl font-bold mb-6" data-i18n="Used Technologies"></h2>
+				<h2 class="text-2xl font-bold mb-6" t="Used Technologies"></h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
 						<a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">
@@ -164,7 +113,7 @@
 						</a>
 						<h3><strong>Flutter</strong></h3>
 						<p
-							data-i18n="A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.">
+							t="A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.">
 						</p>
 					</div>
 					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
@@ -173,8 +122,7 @@
 								class="w-12" alt="logo linguagem dart" />
 						</a>
 						<h3><strong>Dart</strong></h3>
-						<p
-							data-i18n="The programming language used with Flutter to build fast and scalable applications.">
+						<p t="The programming language used with Flutter to build fast and scalable applications.">
 						</p>
 					</div>
 					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
@@ -183,43 +131,25 @@
 						</a>
 						<h3><strong>SharedPreferences</strong></h3>
 						<p
-							data-i18n="A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.">
+							t="A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.">
 						</p>
 					</div>
-					<!-- <div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
-						<a href="https://developer.android.com/?hl=pt-br" target="_blank" rel="noopener noreferrer">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
-								class="w-12" alt="icone logo do android" />
-						</a>
-						<h3><strong>Android SDK</strong></h3>
-						<p data-i18n="Tools and libraries for building Android applications."></p>
-					</div>
-					<div class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center">
-						<a href="https://developer.apple.com/ios/" target="_blank" rel="noopener noreferrer">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
-								class="w-12" alt="icone logo do IOS Apple" />
-						</a>
-
-						<h3><strong>iOS SDK</strong></h3>
-
-						<p data-i18n="Tools and libraries for building iOSapplications."></p>
-					</div> -->
 				</div>
 		</section>
 		<section id="get-started" class="py-10">
 			<div class="container mx-auto">
 				<div class="bg-white shadow-md rounded-lg p-6 text-center">
 					<div class="flex flex-col items-center justify-center gap-1.5 mx-auto mb-4 max-w-md">
-						<h2 class="text-2xl font-bold mb-4" data-i18n="Get started with BMI Tasks Manager"></h2>
+						<h2 class="text-2xl font-bold mb-4" t="Get started with BMI Tasks Manager"></h2>
 						<p class="text-gray-700 mb-6"
-							data-i18n="Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.">
+							t="Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.">
 						</p>
 						<Card class="max-w-sm bg-white shadow-md rounded-lg p-6">
-							<h5 class="mb-2 text-3xl font-bold text-gray-900"
-								data-i18n="Get control of your BMI anywhere"></h5>
-							<p class="mb-5 text-base text-gray-500 sm:text-lg" data-i18n="Download the app today."></p>
+							<h5 class="mb-2 text-3xl font-bold text-gray-900" t="Get control of your BMI anywhere"></h5>
+							<p class="mb-5 text-base text-gray-500 sm:text-lg" t="Download the app today."></p>
 							<div class="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
-								<a href="#"
+								<a href="https://play.google.com/store/games?hl=pt_BR&gl=US" target="_blank"
+									rel="noopener noreferrer"
 									class="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
 									<svg class="mr-3 h-7 w-7" aria-hidden="true" focusable="false" data-prefix="fab"
 										data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +158,7 @@
 											d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
 									</svg>
 									<div class="text-left">
-										<div class="mb-1 text-xs" data-i18n="Get in on"></div>
+										<div class="mb-1 text-xs" t="Get in on"></div>
 										<div class="-mt-1 font-sans text-sm font-semibold">Google Play</div>
 									</div>
 								</a>
@@ -240,22 +170,29 @@
 		</section>
 		<section id="form-section" class="py-10 bg-gray-50">
 			<div class="container mx-auto px-2 md:px-3.5">
-				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Stay Updated"></h2>
+				<h2 class="text-2xl font-bold text-center mb-6" t="Stay Updated"></h2>
 				<form action="mailto:teste@aplicacao.com.br" method="post" enctype="text/plain"
 					class="max-w-lg mx-auto">
 					<div class="mb-4">
-						<label for="name" class="block text-gray-700" data-i18n="Name"></label>
+						<label for="name" class="block text-gray-700" t="Name"></label>
 						<input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded"
 							required />
 					</div>
 					<div class="mb-4">
-						<label for="email" class="block text-gray-700" data-i18n="E-mail"></label>
+						<label for="email" class="block text-gray-700" t="E-mail"></label>
 						<input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"
 							required />
 					</div>
+					<div>
+						<label for="message" class="block text-gray-700" t="Leave your message"></label>
+						<textarea id="message" rows="4"
+							class="block p-2.5 mb-6 w-full text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+							placeholder="Leave a comment..."></textarea>
+
+					</div>
 					<div class="flex justify-center w-full">
 						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-gray-800"
-							data-i18n="Submit" title="submit">
+							t="Submit" title="submit">
 						</button>
 					</div>
 				</form>
@@ -273,13 +210,14 @@
 		</section>
 	</main>
 	<footer class="flex items-center justify-center gap-2 bg-gray-800 text-white py-4 relative bottom-0 w-full">
-		<p><span data-i18n="BMI Tasks Manager"></span> &copy; 2025 - <span data-i18n="All rights reserved."></span></p>
+		<p><span t="BMI Tasks Manager"></span> &copy; 2025 - <span t="All rights reserved."></span></p>
 	</footer>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const updateContent = () => {
-				document.querySelectorAll("[data-i18n]").forEach((e) => {
-					e.textContent = i18next.t(e.getAttribute("data-i18n"));
+				document.querySelectorAll("[t]").forEach((e) => {
+					const key = e.getAttribute("t");
+					e.textContent = i18next.t(key);
 				});
 			};
 
@@ -291,9 +229,7 @@
 				const newLanguage = currentLanguage === "pt_BR" ? "en" : "pt_BR";
 				i18next.changeLanguage(newLanguage, () => {
 					languageLabel.textContent = newLanguage === "pt_BR" ? "pt_BR" : "En";
-					document.querySelectorAll("[data-i18n]").forEach((el) => {
-						el.textContent = i18next.t(el.getAttribute("data-i18n"));
-					});
+					updateContent();
 				});
 			});
 
@@ -303,6 +239,53 @@
 			menuToggle.addEventListener("click", () => {
 				menu.classList.toggle("hidden");
 			});
+
+			// Initializa o i18next e atualiza conteudo gerando traduções para o idioma padrão.
+			i18next.init(
+				{
+					lng: "pt_BR",
+					resources: {
+						pt_BR: {
+							translation: {
+								"BMI TASKS MANAGER": "GERENCIADOR DE TAREFAS IMC",
+								"Home": "Início",
+								"BMI Tasks Manager": "Gerenciador de Tarefas IMC",
+								"Features": "Recursos",
+								"Contact": "Contato",
+								"Manage your tasks and track your BMI efficiently": "Gerencie suas tarefas e acompanhe seu IMC de forma eficiente",
+								"Technologies": "Tecnologias",
+								"Get Started": "Comece Agora",
+								"Welcome to BMI Tasks Manager": "Bem-vindo ao Gerenciador de Tarefas IMC",
+								"Body Mass Index Calculation": "Calculo do indice de Massa Corporal",
+								"Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.": "Permite que os usuários insiram seu peso e altura para obter o Índice de Massa Corporal (IMC), ajudando a avaliar se estão dentro de uma faixa de peso saudável.",
+								"Task Suggestion": "Sugestão de Tarefas",
+								"Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being": "Gera sugestões baseadas no valor do IMC do usuário oferece recomendações personalizadas, como dicas de saúde, exercícios ou ajustes na dieta, ajudando a melhorar o bem-estar geral.",
+								"Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).": "Criar e gerenciar tarefas permite que os usuários organizem suas atividades de forma eficiente, com foco em manter ou melhorar o Índice de Massa Corporal (IMC).",
+								"Create and Manage Tasks": "Criar e Gerenciar Tarefas",
+								"Used Technologies": "Tecnologias Utilizadas",
+								"A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.": "Um kit de ferramentas de interface do usuário para construir aplicativos compilados nativamente para dispositivos móveis, web e desktop a partir de uma única base de código.",
+								"The programming language used with Flutter to build fast and scalable applications.": "A linguagem de programação usada com o Flutter para construir aplicativos rápidos e escaláveis.",
+								"A library used for local data persistence, allowing the storage of key-value pairs for user tasks and preferences.": "Uma biblioteca usada para persistência de dados local, permitindo o armazenamento de pares chave-valor para tarefas e preferências do usuário.",
+								"Get started with BMI Tasks Manager": "Comece com o IMC Tasks Manager",
+								"Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.": "Descubra os benefícios de gerenciar suas tarefas de forma eficiente enquanto acompanha seu IMC. Simplifique sua vida e mantenha-se organizado com nosso aplicativo fácil de usar.",
+								"Stay Updated": "Mantenha-se atualizado",
+								"Name": "Nome",
+								"E-mail": "E-mail",
+								"Submit": "Enviar",
+								"All rights reserved.": "Todos os direitos reservados.",
+								"Get control of your BMI anywhere": "Tenha controle do seu IMC em qualquer lugar",
+								"Download the app today.": "Baixe o aplicativo hoje.",
+								"Get in on": "Baixe em",
+								"Leave your message": "Deixe sua mensagem",
+							},
+						},
+					},
+				},
+				(err) => {
+					if (err) return console.error(err);
+					updateContent();
+				}
+			);
 		});
 	</script>
 </body>
