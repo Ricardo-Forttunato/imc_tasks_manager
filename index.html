@@ -122,11 +122,12 @@
 			<div class="container mx-auto text-center">
 				<h1 class="text-4xl font-bold mb-4" data-i18n="Welcome to BMI Tasks Manager"></h1>
 				<p class="text-lg mb-6" data-i18n="Manage your tasks and track your BMI efficiently"></p>
-				<a href="#get-started" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold"
-					data-i18n="Get Started"></a>
+				<a href="#get-started"
+					class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white"
+					data-i18n="Get Started" title="get-started">
+				</a>
 			</div>
 		</section>
-
 		<section id="features" class="py-10">
 			<div class="container mx-auto">
 				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Features"></h2>
@@ -237,16 +238,14 @@
 							data-i18n="Discover the benefits of managing your tasks efficiently while tracking your BMI. Simplify your life and stay organized with our easy-to-use app.">
 						</p>
 						<Card class="max-w-sm bg-white shadow-md rounded-lg p-6">
-							<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white" data-i18n="Get control of your BMI anywhere"></h5>
-							<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400" data-i18n="Download the app today."></p>
+							<h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white"
+								data-i18n="Get control of your BMI anywhere"></h5>
+							<p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400"
+								data-i18n="Download the app today."></p>
 							<div class="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
 								<a href="#"
 									class="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:w-auto dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-									<svg 
-										class="mr-3 h-7 w-7" 
-										aria-hidden="true" 
-										focusable="false" 
-										data-prefix="fab"
+									<svg class="mr-3 h-7 w-7" aria-hidden="true" focusable="false" data-prefix="fab"
 										data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 512 512">
 										<path fill="currentColor"
@@ -260,11 +259,11 @@
 							</div>
 						</Card>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</section>
 		<section id="form-section" class="py-10">
-			<div class="container mx-auto">
+			<div class="container mx-auto px-2 md:px-3.5">
 				<h2 class="text-2xl font-bold text-center mb-6" data-i18n="Stay Updated"></h2>
 				<form action="mailto:teste@aplicacao.com.br" method="post" enctype="text/plain"
 					class="max-w-lg mx-auto">
@@ -278,23 +277,28 @@
 						<input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"
 							required />
 					</div>
-					<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded" data-i18n="Submit"
-						title="submit"></button>
+					<div class="flex justify-center w-full">
+						<button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+							data-i18n="Submit" title="submit">
+						</button>
+					</div>
 				</form>
 			</div>
 		</section>
 		<section class="py-10">
 			<div class="container mx-auto text-center">
-				<div class="language-toggle">
-					<button id="language-toggle" class="bg-blue-500 text-white px-3 py-2 rounded-full">
+				<div class="fixed right-2 bottom-16 z-50 ">
+					<button id="language-toggle"
+						class="bg-blue-500 text-white px-3 py-2 rounded-full hover:bg-blue-700">
 						<span id="language-label">pt_BR</span>
 					</button>
 				</div>
 			</div>
 		</section>
 	</main>
-	<footer class="flex items-center justify-center gap-2 bg-gray-800 dark:bg-gray-900 text-white py-4">
-		<p>&copy; 2025. <span data-i18n="BMI Tasks Manager"></span> - <span data-i18n="All rights reserved."></span></p>
+	<footer
+		class="flex items-center justify-center gap-2 bg-gray-800 dark:bg-gray-900 text-white py-4 relative bottom-0 w-full">
+		<p><span data-i18n="BMI Tasks Manager"></span> &copy; 2025 - <span data-i18n="All rights reserved."></span></p>
 	</footer>
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 	<script src="app-bundle.js" type="module"></script>
