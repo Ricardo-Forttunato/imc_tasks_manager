@@ -8,7 +8,7 @@
 
 ## Resumo
 
-O **IMC Tasks Manager** é um aplicativo inovador desenvolvido em Flutter, projetado para facilitar o gerenciamento de tarefas para melhor controle do Índice de Massa Corporal (IMC) do usuário. Com uma interface intuitiva e funcionalidades práticas, o aplicativo ajuda a organizar e acompanhar suas atividades, promovendo uma rotina mais saudável e eficiente.
+O **IMC Tasks Manager** é um aplicativo inovador desenvolvido em Flutter, projetado para facilitar o gerenciamento de tarefas garantindo melhor controle sobre o Índice de Massa Corporal (IMC) do usuário. Com uma interface intuitiva e funcionalidades práticas, o aplicativo ajuda a organizar e acompanhar suas atividades, promovendo uma rotina mais saudável e eficiente.
 
 ##
 
@@ -55,7 +55,44 @@ Características principais:
 - Uso simples, sem necessidade de banco de dados complexo.
 - Compatível com Android e iOS, utilizando NSUserDefaults no iOS/macOS e SharedPreferences no Android.
 
+### Modelo Entidade-Relacionamento para SharedPreferences
+
+`Usuario:`
+
+`Tarefas:` `Int ID` `String Descrição` `String Data e Hora`
+
+`Usuario (1) -----> (N) Tarefas`
+
 ##
+
+Modelo Json:
+
+```
+[
+   {
+      "id":1
+      "title":"Primeiro exemplo de titulo para tarefas",
+      "date":"01/05/2025 - 18:45",
+   }
+   {
+      "id":2
+      "title":"Segundo exemplo de titulo para tarefas",
+      "date":"01/05/2025 - 18:45",
+   }
+]
+```
+
+##
+
+### Ilustrão da estrutura lógica de dados usando DER
+
+###
+
+![DER](images/diagrama-entidade-relacionamento.png)
+
+##
+
+<a href="/DER-IMC-TASK-MANAGER.drawio.html" target="_blank">Diagrama Entidade-Relacionamento</a>
 
 ## Visite Nosso Site
 
