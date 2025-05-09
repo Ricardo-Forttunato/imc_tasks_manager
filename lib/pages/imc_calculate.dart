@@ -26,7 +26,6 @@ class _ImcCalculateState extends State<ImcCalculate> {
     setState(() {
       _infoText = 'Informe seus dados!';
       _formKey = GlobalKey<FormState>();
-      widget.onImcCalculated?.call(''); // Clear the IMC category suggestion
     });
   }
 
@@ -87,22 +86,27 @@ class _ImcCalculateState extends State<ImcCalculate> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.balance, size: 120.0, color: Theme.of(context).primaryColor),
+                        Icon(Icons.balance,
+                            size: 120.0, color: Theme.of(context).primaryColor),
                         SizedBox(
                           width: 10.0,
                         ),
                         Expanded(
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               TextFormField(
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
                                   labelText: 'Peso (kg)',
-                                  labelStyle: TextStyle(color: Theme.of(context).primaryColor),
+                                  labelStyle: TextStyle(
+                                      color: Theme.of(context).primaryColor),
                                 ),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Theme.of(context).primaryColor, fontSize: 20.0),
+                                    color: Theme.of(context).primaryColor,
+                                    fontSize: 20.0),
                                 controller: weightController,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
@@ -115,11 +119,13 @@ class _ImcCalculateState extends State<ImcCalculate> {
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
                                   labelText: 'Altura (cm)',
-                                  labelStyle: TextStyle(color: Theme.of(context).primaryColor),
+                                  labelStyle: TextStyle(
+                                      color: Theme.of(context).primaryColor),
                                 ),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Theme.of(context).primaryColor, fontSize: 20.0),
+                                    color: Theme.of(context).primaryColor,
+                                    fontSize: 20.0),
                                 controller: heightController,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
@@ -149,7 +155,8 @@ class _ImcCalculateState extends State<ImcCalculate> {
                           ),
                           child: const Text(
                             'Calcular',
-                            style: TextStyle(color: Colors.white, fontSize: 20.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 20.0),
                           ),
                         ),
                       ),
@@ -157,7 +164,9 @@ class _ImcCalculateState extends State<ImcCalculate> {
                     Text(
                       _infoText,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 20.0),
+                      style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 20.0),
                     ),
                   ],
                 ),
