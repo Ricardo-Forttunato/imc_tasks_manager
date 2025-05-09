@@ -5,7 +5,9 @@ import 'package:imc_tasks_manager/repositories/todo_repository.dart';
 import '../widgets/todo_list_item.dart';
 
 class TodoListPage extends StatefulWidget {
-  const TodoListPage({super.key});
+  final TextEditingController taskInputController;
+
+  const TodoListPage({super.key, required this.taskInputController});
 
   @override
   State<TodoListPage> createState() => _TodoListPageState();
@@ -23,6 +25,12 @@ class _TodoListPageState extends State<TodoListPage> {
   @override
   void initState() {
     super.initState();
+    if (widget.taskInputController.text.isNotEmpty) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        addSuggestionAsTask(widget.taskInputController.text);
+        widget.taskInputController.clear();
+      });
+    }
     todoRepository.getTodoList().then((value) {
       setState(() {
         tarefas = value;
@@ -32,130 +40,136 @@ class _TodoListPageState extends State<TodoListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        body: Container(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+    return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: todoController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Digite sua nova tarefa',
-                          hintText: 'Ex: Marcar Consulta com uma nutricionista',
-                          errorText: errorText,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
-                              width: 1,
-                            ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Theme.of(context).primaryColor,
-                              width: 2,
-                            ),
-                          ),
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                          ),
+                Expanded(
+                  child: TextField(
+                    controller: todoController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Digite sua nova tarefa',
+                      hintText: 'Ex: Marcar Consulta com uma nutricionista',
+                      errorText: errorText,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Theme.of(context).primaryColor,
+                          width: 1,
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 8),
-                    ElevatedButton(
-                      onPressed: () {
-                        String text = todoController.text;
-                        if (text.isEmpty) {
-                          setState(() {
-                            errorText = 'O campo título não pode estar vazio!';
-                          });
-                          return;
-                        }
-
-                        setState(() {
-                          Todo newTodo = Todo(
-                            title: text,
-                            date: DateTime.now(),
-                          );
-                          tarefas.add(newTodo);
-                          errorText = null;
-                        });
-                        todoController.clear();
-                        todoRepository.saveTodoList(tarefas);
-                      },
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).primaryColor,
-                          padding: const EdgeInsets.all(14)),
-                      child: const Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 30,
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Theme.of(context).primaryColor,
+                          width: 2,
+                        ),
+                      ),
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                Flexible(
-                    child: SizedBox(
-                  height: 320,
-                  child: ListView(
-                    shrinkWrap: true,
-                    children: [
-                      for (Todo tarefa in tarefas)
-                        TodoListItem(
-                          todo: tarefa,
-                          onDelete: onDelete,
-                        ),
-                    ],
                   ),
-                )),
-                const SizedBox(height: 16),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        'Você possui ${tarefas.length} tarefas pendentes',
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    ElevatedButton(
-                      onPressed: showDeleteTodosConfirmationDialog,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor,
-                        padding: EdgeInsets.all(15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                      ),
-                      child: const Text(
-                        'Limpar tudo',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                    ),
-                  ],
+                ),
+                const SizedBox(width: 8),
+                ElevatedButton(
+                  onPressed: () {
+                    String text = todoController.text;
+                    if (text.isEmpty) {
+                      setState(() {
+                        errorText = 'O campo título não pode estar vazio!';
+                      });
+                      return;
+                    }
+
+                    setState(() {
+                      Todo newTodo = Todo(
+                        title: text,
+                        date: DateTime.now(),
+                      );
+                      tarefas.add(newTodo);
+                      errorText = null;
+                    });
+                    todoController.clear();
+                    todoRepository.saveTodoList(tarefas);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      padding: const EdgeInsets.all(14)),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 30,
+                  ),
                 ),
               ],
             ),
-          ),
+            const SizedBox(
+              height: 16,
+            ),
+            Flexible(
+                child: SizedBox(
+              height: 320,
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  for (Todo tarefa in tarefas)
+                    TodoListItem(
+                      todo: tarefa,
+                      onDelete: onDelete,
+                    ),
+                ],
+              ),
+            )),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    'Você possui ${tarefas.length} tarefas pendentes',
+                    style: TextStyle(color: Theme.of(context).primaryColor),
+                  ),
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                ElevatedButton(
+                  onPressed: showDeleteTodosConfirmationDialog,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Theme.of(context).primaryColor,
+                    padding: EdgeInsets.all(15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                  ),
+                  child: const Text(
+                    'Limpar tudo',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
+  }
+
+  void addSuggestionAsTask(String suggestion) {
+    setState(() {
+      if (suggestion.isNotEmpty) {
+        tarefas.add(Todo(title: suggestion, date: DateTime.now()));
+        todoController.clear();
+        todoRepository.saveTodoList(tarefas);
+      }
+    });
   }
 
   void onDelete(Todo todo) {
