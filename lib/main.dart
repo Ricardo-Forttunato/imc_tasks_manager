@@ -97,7 +97,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final tasksSuggestions = TasksSuggestions();
   String? _imcCategory;
-  TextEditingController _taskInputController = TextEditingController();
+  final TextEditingController _taskInputController = TextEditingController();
 
   void _showSuggestionModal(BuildContext context, String suggestion) {
     showDialog(
