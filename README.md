@@ -1,14 +1,20 @@
 # PROJETO INTEGRADOR - ANALISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES
 
+<br>
+
+##
+
 ## Contribuidores
 
 - João Ricardo Fortunato da Silva
+  <br><br>
 
 ##
 
 ## Resumo
 
 O **IMC Tasks Manager** é um aplicativo inovador desenvolvido em Flutter, projetado para facilitar o gerenciamento de tarefas garantindo melhor controle sobre o Índice de Massa Corporal (IMC) do usuário. Com uma interface intuitiva e funcionalidades práticas, o aplicativo ajuda a organizar e acompanhar suas atividades, promovendo uma rotina mais saudável e eficiente.
+<br><br>
 
 ##
 
@@ -21,6 +27,7 @@ A arquitetura do aplicativo foi projetada para ser modular e escalável, utiliza
 Além disso, o aplicativo adota práticas modernas de design, como suporte a temas dinâmicos (claro e escuro) e uma interface responsiva que se adapta a diferentes tamanhos de tela. O código é estruturado seguindo as melhores práticas de desenvolvimento, garantindo legibilidade, manutenção e extensibilidade.
 
 Com o **IMC Tasks Manager**, os usuários podem não apenas calcular e monitorar seu IMC, mas também criar, organizar e gerenciar tarefas personalizadas, promovendo uma abordagem integrada para alcançar uma rotina mais saudável e equilibrada.
+<br><br>
 
 ##
 
@@ -34,6 +41,7 @@ Com o **IMC Tasks Manager**, os usuários podem não apenas calcular e monitorar
 - Cadastro de tarefas personalizadas para atender às necessidades individuais.
 - Exclusão de tarefas concluídas para manter a lista organizada.
 - Botão para limpar todas as tarefas, com dupla confirmação para evitar exclusões acidentais.
+  <br><br>
 
 ##
 
@@ -42,6 +50,7 @@ Com o **IMC Tasks Manager**, os usuários podem não apenas calcular e monitorar
 - **Flutter**: Framework para desenvolvimento multiplataforma.
 - **Dart**: Linguagem de programação utilizada no Flutter.
 - **SharedPreferences**: Para armazenamento de pequenas quantidades de dados de forma persistente.
+  <br><br>
 
 ##
 
@@ -93,12 +102,16 @@ Modelo Json:
 ##
 
 <br>
+<br>
 
 ## Visite Nosso Site
 
-Link de acesso a Landing Page do
+### Link de acesso a Landing Page do projeto
 
 https://ricardo-forttunato.github.io/imc_tasks_manager/
+
+<br>
+<br>
 
 ##
 
@@ -125,12 +138,14 @@ https://ricardo-forttunato.github.io/imc_tasks_manager/
    flutter run
    ```
    Obs: antes de executar o flutter run execute o comando flutter doctor no terminal para garantir que todas depencias foram criadas.
+   <br><br>
 
 ##
 
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+<br><br>
 
 ##
 
