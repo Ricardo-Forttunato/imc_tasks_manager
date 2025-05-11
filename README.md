@@ -1,6 +1,6 @@
 # PROJETO INTEGRADOR - ANALISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES
 
-## Alunos
+## Contribuidores
 
 - João Ricardo Fortunato da Silva
 
@@ -92,9 +92,11 @@ Modelo Json:
 
 ##
 
-<a href="/DER-IMC-TASK-MANAGER.drawio.html" target="_blank">Diagrama Entidade-Relacionamento</a>
+<a href="/Der_IMC-Tasks-Manager.drawio.html" target="_blank">Diagrama Entidade-Relacionamento</a>
 
 ## Visite Nosso Site
+
+Link de acesso a Landing Page do
 
 https://ricardo-forttunato.github.io/imc_tasks_manager/
 
