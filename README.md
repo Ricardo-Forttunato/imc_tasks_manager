@@ -92,7 +92,7 @@ Modelo Json:
 
 ##
 
-<a href="/Der_IMC-Tasks-Manager.drawio.html" target="_blank">Diagrama Entidade-Relacionamento</a>
+<br>
 
 ## Visite Nosso Site
 
