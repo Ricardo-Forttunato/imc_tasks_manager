@@ -84,7 +84,7 @@ Modelo Json:
 
 ##
 
-### Ilustrão da estrutura lógica de dados usando DER
+### Ilustração da estrutura lógica de dados usando DER
 
 ###
 
