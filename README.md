@@ -4,10 +4,57 @@
 
 ##
 
-## Contribuidores
+## Contribuidores do Projeto
 
-- João Ricardo Fortunato da Silva
-  <br><br>
+<table>
+   <caption>Tabela de contribuição do grupo</caption>
+   <thead>
+      <tr>
+         <th>Tarefas</th>
+         <th>Contribuidor</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Desenvolvimento do APP</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Modelo Entidade-Relacionamento(MER)</td>
+         <td>Felipe Carreira Dos Santos</td>
+      </tr>
+      <tr>
+         <td>Diagrama Entidade-Relacionamento(DER)</td>
+         <td>Gabriel Guilherme Dos Santos Almeida</td>
+      </tr>
+      <tr>
+         <td>Criação do Repositorio no Github</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Desenvolvimento da Landing Page</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Desenvolvimento do README</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Documentação tecnica do projeto</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Video Demostrativo do Projeto</td>
+         <td>João Roberto Garske Pontes</td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+      </tr>
+   </tbody>
+</table>
+
+<br><br>
 
 ##
 
@@ -28,6 +75,38 @@ Além disso, o aplicativo adota práticas modernas de design, como suporte a tem
 
 Com o **IMC Tasks Manager**, os usuários podem não apenas calcular e monitorar seu IMC, mas também criar, organizar e gerenciar tarefas personalizadas, promovendo uma abordagem integrada para alcançar uma rotina mais saudável e equilibrada.
 <br><br>
+
+##
+
+## Estrutura de Pastas do Projeto
+
+```
+Projeto IMC-Tasks-Manager
+
+Root
+├── lib /
+│       ├──  models /
+│       │       ├── tasks_suggestions.dart
+│       │       │
+│       │       ├── todo.dart
+│       │
+│       ├── pages /
+│       │       ├── imc_calculate.dart
+│       │       │
+│       │       ├── to_do_list_page.dart
+│       │
+│       ├── repositories /
+│       │       ├── todo_repository.dart
+│       │       │
+│       │
+│       ├── widgets /
+│       │       ├── imc_suggestion_box.dart
+│       │       │
+│       │       ├── todo_list_item.dart
+│       │
+│       ├── main.dart
+
+```
 
 ##
 
@@ -110,8 +189,20 @@ Modelo Json:
 
 https://ricardo-forttunato.github.io/imc_tasks_manager/
 
-<br>
-<br>
+<br><br>
+
+## Link do Repositório
+
+https://github.com/Ricardo-Forttunato/imc_tasks_manager
+
+<br><br>
+
+## Video de Apresentação da aplicação
+
+### Link de acesso a Landing Page do projeto
+
+[colar link do video de apresentação]
+<br><br>
 
 ##
 

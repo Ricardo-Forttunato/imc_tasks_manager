@@ -22,7 +22,7 @@
 				<a href="#" class="text-white text-lg font-bold hidden md:block" t="BMI TASKS MANAGER">Titulo</a>
 			</div>
 			<div class="flex flex-col items-end">
-				<button id="menu-toggle" class="text-white block md:hidden">
+				<button id="menu-toggle" class="text-white block md:hidden" aria-label="Menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -31,16 +31,16 @@
 				</button>
 				<ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-4 md:justify-end">
 					<li>
-						<a href="#features" class="text-gray-300 hover:text-white" t="Features"></a>
+						<a href="#features" class="text-gray-300 hover:text-white" t="Features">text</a>
 					</li>
 					<li>
-						<a href="#technologies" class="text-gray-300 hover:text-white" t="Technologies"></a>
+						<a href="#technologies" class="text-gray-300 hover:text-white" t="Technologies">text</a>
 					</li>
 					<li>
-						<a href="#get-started" class="text-gray-300 hover:text-white" t="Get Started"></a>
+						<a href="#get-started" class="text-gray-300 hover:text-white" t="Get Started">text</a>
 					</li>
 					<li>
-						<a href="#form-section" class="text-gray-300 hover:text-white" t="Contact"></a>
+						<a href="#form-section" class="text-gray-300 hover:text-white" t="Contact">text</a>
 					</li>
 				</ul>
 			</div>
@@ -68,36 +68,47 @@
 		<section id="features" class="py-10">
 			<div class="container mx-auto">
 				<h2 class="text-2xl font-bold text-center mb-6" t="Features"></h2>
-				<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+				<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
 					<div class="bg-white shadow-md rounded-lg overflow-hidden">
-						<img src="../images/calculoimc.png" alt="Feature 1" class="w-full h-60 object-contain"
+						<img src="../images/light_dark_mode.png" alt="Feature 1" class="w-full h-60 object-contain"
+							alt="aplcativo IMC" />
+						<div class="p-4 flex flex-col items-center">
+							<h3 class="text-lg font-bold mb-2" t="Changeable theme"></h3>
+							<p class="text-gray-600 text-center"
+								t="Switch between light and dark mode, adapting the app’s appearance to match the system theme for a more comfortable and personalized experience.">
+							</p>
+						</div>
+					</div>
+
+					<div class="bg-white shadow-md rounded-lg overflow-hidden">
+						<img src="../images/bmi_calculation.png" alt="Feature 1" class="w-full h-60 object-contain"
 							alt="caculadora de imc da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" t="Body Mass Index Calculation"></h3>
-							<p class="text-gray-600"
+							<p class="text-gray-600 text-center"
 								t="Allows users to input their weight and height to obtain the Body Mass Index (BMI), helping them assess whether they are within a healthy weight range.">
 							</p>
 						</div>
 					</div>
 
 					<div class="bg-white shadow-md rounded-lg overflow-hidden">
-						<img src="../images/sugestoes.png" alt="Feature 2" class="w-full h-60 object-contain"
+						<img src="../images/suggestions.png" alt="Feature 2" class="w-full h-60 object-contain"
 							alt="Campo de sugestões da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" t="Task Suggestion"></h3>
-							<p class="text-gray-600"
+							<p class="text-gray-600 text-center"
 								t="Generates suggestions based on the user's BMI provides personalized recommendations, such as health tips, exercises, or dietary adjustments, helping to improve overall well-being">
 							</p>
 						</div>
 					</div>
 
 					<div class="bg-white shadow-md rounded-lg overflow-hidden">
-						<img src="../images/tarefas.png" alt="Feature 3" class="w-full h-60 object-contain"
+						<img src="../images/tasks_manager.png" alt="Feature 3" class="w-full h-60 object-contain"
 							alt="Campo de criação e gerenciamento de tarefas da aplicação" />
 						<div class="p-4 flex flex-col items-center">
 							<h3 class="text-lg font-bold mb-2" t="Create and Manage Tasks"></h3>
-							<p class="text-gray-600"
+							<p class="text-gray-600 text-center"
 								t="Create and manage tasks allows users to efficiently organize their activities, focusing on maintaining or improving their Body Mass Index (BMI).">
 							</p>
 						</div>
@@ -150,7 +161,7 @@
 						</p>
 						<Card class="max-w-sm bg-white shadow-md rounded-lg p-6">
 							<h5 class="mb-2 text-3xl font-bold text-gray-900" t="Get control of your BMI anywhere"></h5>
-							<p class="mb-5 text-base text-gray-500 sm:text-lg" t="Download the app today."></p>
+							<p class="mb-5 text-base text-gray-500 sm:text-lg" t="Download free the app today"></p>
 							<div class="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
 								<a href="https://play.google.com/store/games?hl=pt_BR&gl=US" target="_blank"
 									rel="noopener noreferrer"
@@ -178,17 +189,17 @@
 				<form action="mailto:teste@aplicacao.com.br" method="post" enctype="text/plain"
 					class="max-w-lg mx-auto">
 					<div class="mb-4">
-						<label for="name" class="block text-gray-700" t="Name"></label>
+						<label for="name" class="block text-gray-700" t="Name">Name</label>
 						<input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded"
 							required />
 					</div>
 					<div class="mb-4">
-						<label for="email" class="block text-gray-700" t="E-mail"></label>
+						<label for="email" class="block text-gray-700" t="E-mail">E-mail</label>
 						<input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded"
 							required />
 					</div>
 					<div>
-						<label for="message" class="block text-gray-700" t="Leave your message"></label>
+						<label for="message" class="block text-gray-700" t="Leave your message">Comment</label>
 						<textarea id="message" rows="4"
 							class="block p-2.5 mb-6 w-full text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
 							placeholder="Leave a comment..."></textarea>
@@ -256,6 +267,8 @@
 								"BMI Tasks Manager": "Gerenciador de Tarefas IMC",
 								"Features": "Recursos",
 								"Contact": "Contato",
+								"Changeable theme": "Tema Alternável",
+								"Switch between light and dark mode, adapting the app’s appearance to match the system theme for a more comfortable and personalized experience.": "Alterne entre o modo claro e escuro, adaptando a aparência do aplicativo para corresponder ao tema do sistema, proporcionando uma experiência mais confortável e personalizada.",
 								"Manage your tasks and track your BMI efficiently": "Gerencie suas tarefas e acompanhe seu IMC de forma eficiente",
 								"Technologies": "Tecnologias",
 								"Get Started": "Comece Agora",
@@ -278,7 +291,7 @@
 								"Submit": "Enviar",
 								"All rights reserved.": "Todos os direitos reservados.",
 								"Get control of your BMI anywhere": "Tenha controle do seu IMC em qualquer lugar",
-								"Download the app today.": "Baixe o aplicativo hoje.",
+								"Download free the app today": "Baixe o aplicativo gratuitamente hoje",
 								"Get in on": "Baixe em",
 								"Leave your message": "Deixe sua mensagem",
 							},
