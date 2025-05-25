@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:imc_tasks_manager/pages/to_do_list_page.dart';
 import 'package:imc_tasks_manager/pages/imc_calculate.dart';
-import 'widgets/imc_suggestion_box.dart';
 import 'models/tasks_suggetions.dart';
 import 'package:flutter/services.dart';
 
