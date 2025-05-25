@@ -1,3 +1,5 @@
+##
+
 # PROJETO INTEGRADOR - ANÁLISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES
 
 <br>
@@ -65,7 +67,8 @@
 ## Resumo
 
 O **IMC Tasks Manager** é um aplicativo inovador desenvolvido em Flutter, projetado para facilitar o gerenciamento de tarefas garantindo melhor controle sobre o Índice de Massa Corporal (IMC) do usuário. Com uma interface intuitiva e funcionalidades práticas, o aplicativo ajuda a organizar e acompanhar suas atividades, promovendo uma rotina mais saudável e eficiente.
-<br><br>
+
+<br>
 
 ##
 
@@ -78,7 +81,8 @@ A arquitetura do aplicativo foi projetada para ser modular e escalável, utiliza
 Além disso, o aplicativo adota práticas modernas de design, como suporte a temas dinâmicos (claro e escuro) e uma interface responsiva que se adapta a diferentes tamanhos de tela. O código é estruturado seguindo as melhores práticas de desenvolvimento, garantindo legibilidade, manutenção e extensibilidade.
 
 Com o **IMC Tasks Manager**, os usuários podem não apenas calcular e monitorar seu IMC, mas também criar, organizar e gerenciar tarefas personalizadas, promovendo uma abordagem integrada para alcançar uma rotina mais saudável e equilibrada.
-<br><br>
+
+<br>
 
 ##
 
@@ -147,6 +151,8 @@ Características principais:
 - Uso simples, sem necessidade de banco de dados complexo.
 - Compatível com Android e iOS, utilizando NSUserDefaults no iOS/macOS e SharedPreferences no Android.
 
+##
+
 ### Modelo Entidade-Relacionamento para SharedPreferences
 
 `Usuario:`
@@ -190,30 +196,37 @@ Modelo Json:
 
 ![DER](images/diagrama-entidade-relacionamento.png)
 
-##
+<br>
 
-<br>
-<br>
+##
 
 ## Visite Nosso Site
 
-### Link de acesso a Landing Page do projeto
+<br>
 
-[Link para a landing page da aplicação](https://ricardo-forttunato.github.io/imc_tasks_manager/)
-<br><br>
+[Clique aqui para acessar nossa landing page da aplicação](https://ricardo-forttunato.github.io/imc_tasks_manager/)
+
+<br>
+
+##
 
 ## Link do Repositório
 
-[Link do repositorio do Projeto](https://github.com/Ricardo-Forttunato/imc_tasks_manager)
+<br>
 
-<br><br>
+[Clique aqui para acessar o repositorio do Projeto](https://github.com/Ricardo-Forttunato/imc_tasks_manager)
+
+<br>
+
+##
 
 ## Video de Apresentação da aplicação
 
-### Link de acesso à apresentação do projeto
+<br>
 
-[Link para o video de apresentação do projeto](https://www.youtube.com/watch?v=Y_ER7Pp11o0&ab_channel=BrunoGon%C3%A7alves)
-<br><br>
+[Clique aqui para acessar o video de apresentação do projeto no Youtube](https://www.youtube.com/watch?v=Y_ER7Pp11o0&ab_channel=BrunoGon%C3%A7alves)
+
+<br>
 
 ##
 
