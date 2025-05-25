@@ -50,12 +50,16 @@
          <td>João Ricado Fortunato da Silva</td>
       </tr>
       <tr>
+         <td>Video de Apresentação do aplicativo</td>
+         <td>João Ricardo Fortunato da Silva</td>
+      </tr>
+      <tr>
          <td>Video de Apresentação do Projeto</td>
          <td>João Roberto Garske Pontes / Bruno Ribeiro da Silva Gonçalves</td>
       </tr>
       <tr>
-         <td>Vídeo de Apresentação</td>
-         <td>Bruno Ribeiro da Silva Gonçalves</td>
+         <td></td>
+         <td></td>
       </tr>
    </tbody>
 </table>
