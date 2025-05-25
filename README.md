@@ -48,8 +48,8 @@
          <td>João Roberto Garske Pontes</td>
       </tr>
       <tr>
-         <td></td>
-         <td></td>
+         <td>Vídeo de Apresentação</td>
+         <td>Bruno Ribeiro da Silva Gonçalves</td>
       </tr>
    </tbody>
 </table>
@@ -199,9 +199,9 @@ https://github.com/Ricardo-Forttunato/imc_tasks_manager
 
 ## Video de Apresentação da aplicação
 
-### Link de acesso a Landing Page do projeto
+### Link de acesso à apresentação do projeto
 
-[colar link do video de apresentação]
+https://www.youtube.com/watch?v=Y_ER7Pp11o0&ab_channel=BrunoGon%C3%A7alves
 <br><br>
 
 ##
