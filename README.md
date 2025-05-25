@@ -21,11 +21,11 @@
       </tr>
       <tr>
          <td>Modelo Entidade-Relacionamento(MER)</td>
-         <td>Felipe Carreira Dos Santos</td>
+         <td>Felipe Carreira Dos Santos / Gabriel Guilherme Dos Santos Almeida</td>
       </tr>
       <tr>
          <td>Diagrama Entidade-Relacionamento(DER)</td>
-         <td>Gabriel Guilherme Dos Santos Almeida</td>
+         <td>Gabriel Guilherme Dos Santos Almeida / Felipe Carreira Dos Santos</td>
       </tr>
       <tr>
          <td>Criação do Repositorio no Github</td>
@@ -44,8 +44,12 @@
          <td>João Ricado Fortunato da Silva</td>
       </tr>
       <tr>
-         <td>Video Demostrativo do Projeto</td>
-         <td>João Roberto Garske Pontes</td>
+         <td>Video de demostração do aplicativo</td>
+         <td>João Ricado Fortunato da Silva</td>
+      </tr>
+      <tr>
+         <td>Video de Apresentação do Projeto</td>
+         <td>João Roberto Garske Pontes / Bruno Ribeiro da Silva Gonçalves</td>
       </tr>
       <tr>
          <td></td>
@@ -135,10 +139,10 @@ Root
 
 ## Modelagem de Dados com Armazenamento Local
 
-Para a modelagem de dados, foi utilizado o package **shared_preferences** no arquivo `Todo_repository.dart`. Este package permite o armazenamento local de dados simples, como pares chave-valor, facilitando a persistência de informações relacionadas às tarefas do usuário.
+Para o armazenamento de dados, foi utilizado o package **shared_preferences** no arquivo `Todo_repository.dart`. Este package permite o armazenamento local de dados simples, como pares chave-valor, facilitando a persistência de informações relacionadas às tarefas do usuário.
 Características principais:
 
-- Armazena dados primitivos como int, double, bool, String e List<String>.
+- Armazena dados primitivos como int, double, bool, String e Arrays.
 - Persistência automática, ou seja, os dados permanecem salvos mesmo após o fechamento do aplicativo.
 - Uso simples, sem necessidade de banco de dados complexo.
 - Compatível com Android e iOS, utilizando NSUserDefaults no iOS/macOS e SharedPreferences no Android.
@@ -195,13 +199,12 @@ Modelo Json:
 
 ### Link de acesso a Landing Page do projeto
 
-https://ricardo-forttunato.github.io/imc_tasks_manager/
-
+[Link para a landing page da aplicação](https://ricardo-forttunato.github.io/imc_tasks_manager/)
 <br><br>
 
 ## Link do Repositório
 
-https://github.com/Ricardo-Forttunato/imc_tasks_manager
+[Link do repositorio do Projeto](https://github.com/Ricardo-Forttunato/imc_tasks_manager)
 
 <br><br>
 
@@ -209,7 +212,7 @@ https://github.com/Ricardo-Forttunato/imc_tasks_manager
 
 ### Link de acesso a Landing Page do projeto
 
-[colar link do video de apresentação]
+[Link para o video de apresentação do projeto](https://www.youtube.com/watch?v=Y_ER7Pp11o0&ab_channel=BrunoGon%C3%A7alves)
 <br><br>
 
 ##
