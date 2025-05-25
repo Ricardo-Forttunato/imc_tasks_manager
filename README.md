@@ -53,10 +53,6 @@
          <td>Video de Apresentação do Projeto</td>
          <td>João Roberto Garske Pontes / Bruno Ribeiro da Silva Gonçalves</td>
       </tr>
-      <tr>
-         <td></td>
-         <td></td>
-      </tr>
    </tbody>
 </table>
 
