@@ -166,18 +166,20 @@ Características principais:
 Modelo Json:
 
 ```
-[
-   {
-      "id":1
-      "title":"Primeiro exemplo de titulo para tarefas",
-      "date":"01/05/2025 - 18:45",
-   }
-   {
-      "id":2
-      "title":"Segundo exemplo de titulo para tarefas",
-      "date":"01/05/2025 - 18:45",
-   }
-]
+1
+2  [
+3     {
+4        "id":1
+5        "title":"Primeiro exemplo de titulo para tarefas",
+6        "date":"01/05/2025 - 18:45",
+7     }
+8     {
+9        "id":2
+10       "title":"Segundo exemplo de titulo para tarefas",
+11       "date":"01/05/2025 - 18:45",
+12    }
+13 ]
+14
 ```
 
 ##
