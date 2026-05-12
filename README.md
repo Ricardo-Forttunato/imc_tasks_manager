@@ -214,15 +214,6 @@ Modelo Json:
 
 [Clique aqui para acessar o repositorio do Projeto](https://github.com/Ricardo-Forttunato/imc_tasks_manager)
 
-<br>
-
-##
-
-## Video de Apresentação da aplicação
-
-<br>
-
-[Clique aqui para acessar o video de apresentação do projeto no Youtube](https://www.youtube.com/watch?v=Y_ER7Pp11o0&ab_channel=BrunoGon%C3%A7alves)
 
 <br>
 
